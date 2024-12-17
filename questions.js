@@ -1,5 +1,4 @@
-let questions = {
-  "questions": [
+let questions = { "questions": [
     { "question": "Who won the 2018 FIFA World Cup?", "answer": "France" },
     { "question": "Which country hosted the 1998 FIFA World Cup?", "answer": "France" },
     { "question": "Who is known as 'The Egyptian King' in football?", "answer": "Mohamed Salah" },
@@ -88,7 +87,8 @@ let questions = {
 };
 
 
-let questions_quiz = JSON.parse(questions)
-questions_quiz = JSON.stringify(questions_quiz);
+let firstQuestion = questions.questions[0].question;
+let firstAnswer = questions.questions[0].answer;
 
-console.log(questions_quiz);
+console.log("First Question:", firstQuestion);
+console.log("First Answer:", firstAnswer);

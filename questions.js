@@ -1,94 +1,293 @@
-let questions = { "questions": [
-    { "question": "Who won the 2018 FIFA World Cup?", "answer": "France" },
-    { "question": "Which country hosted the 1998 FIFA World Cup?", "answer": "France" },
-    { "question": "Who is known as 'The Egyptian King' in football?", "answer": "Mohamed Salah" },
-    { "question": "Which player is known as 'CR7'?", "answer": "Cristiano Ronaldo" },
-    { "question": "Which club did Lionel Messi play for before joining Paris Saint-Germain?", "answer": "Barcelona" },
-    { "question": "Which team won the 2020 UEFA Champions League?", "answer": "Bayern Munich" },
-    { "question": "Which country has won the most World Cup titles?", "answer": "Brazil" },
-    { "question": "Who is the all-time top scorer in the Premier League?", "answer": "Harry Kane" },
-    { "question": "Which player is known as 'The Pharaoh'?", "answer": "Mohamed Salah" },
-    { "question": "Who is the manager of Manchester City as of 2024?", "answer": "Pep Guardiola" },
-    { "question": "Which country won the 2014 FIFA World Cup?", "answer": "Germany" },
-    { "question": "Who holds the record for the most goals in World Cup history?", "answer": "Marta" },
-    { "question": "Which country won the UEFA Euro 2020?", "answer": "Italy" },
-    { "question": "Who won the Ballon d'Or in 2023?", "answer": "Lionel Messi" },
-    { "question": "Which team won the Premier League in the 2022/2023 season?", "answer": "Manchester City" },
-    { "question": "Who was the first footballer to win five Ballon d'Or awards?", "answer": "Cristiano Ronaldo" },
-    { "question": "Who won the 2022 FIFA World Cup?", "answer": "Argentina" },
-    { "question": "Which club has the most UEFA Champions League titles?", "answer": "Real Madrid" },
-    { "question": "Which country hosted the 2014 FIFA World Cup?", "answer": "Brazil" },
-    { "question": "Which footballer is known as 'The Special One'?", "answer": "Jose Mourinho" },
-    { "question": "Which country won the 2010 FIFA World Cup?", "answer": "Spain" },
-    { "question": "Who is the all-time top scorer in La Liga?", "answer": "Lionel Messi" },
-    { "question": "Which team won the 2022 FIFA World Cup final?", "answer": "Argentina" },
-    { "question": "Which country has the most Copa America titles?", "answer": "Uruguay" },
-    { "question": "Who is the all-time top scorer for Manchester United?", "answer": "Wayne Rooney" },
-    { "question": "Who won the 2012 UEFA Champions League?", "answer": "Chelsea" },
-    { "question": "Who holds the record for the most goals in a single season in the Premier League?", "answer": "Erling Haaland" },
-    { "question": "Who is the only player to have won the Ballon d'Or, FIFA World Cup, and the UEFA Champions League in the same year?", "answer": "Lionel Messi" },
-    { "question": "Which country won the first FIFA World Cup in 1930?", "answer": "Uruguay" },
-    { "question": "Who is the all-time top scorer in the Bundesliga?", "answer": "Gerd Müller" },
-    { "question": "Who is known as 'The King of the Dribble'?", "answer": "Diego Maradona" },
-    { "question": "Which team has won the most FA Cups?", "answer": "Arsenal" },
-    { "question": "Who is the only player to have won the European Golden Shoe four times?", "answer": "Lionel Messi" },
-    { "question": "Which club is nicknamed 'The Red Devils'?", "answer": "Manchester United" },
-    { "question": "Who is the all-time top scorer in the Italian Serie A?", "answer": "Cristiano Ronaldo" },
-    { "question": "Who won the 2021 Copa America?", "answer": "Argentina" },
-    { "question": "Which country won the first UEFA Euro Championship in 1960?", "answer": "Soviet Union" },
-    { "question": "Who won the 2016 UEFA Euro Championship?", "answer": "Portugal" },
-    { "question": "Who is the all-time top scorer in the French Ligue 1?", "answer": "Thierry Henry" },
-    { "question": "Which player has the most international goals for Brazil?", "answer": "Neymar" },
-    { "question": "Which club has won the most La Liga titles?", "answer": "Real Madrid" },
-    { "question": "Who is the top scorer for the German national football team?", "answer": "Miroslav Klose" },
-    { "question": "Which country hosted the 2002 FIFA World Cup?", "answer": "South Korea and Japan" },
-    { "question": "Who was the first player to reach 1000 career goals?", "answer": "Pele" },
-    { "question": "Who is the youngest player to score in a World Cup?", "answer": "Pele" },
-    { "question": "Which team won the 2015 Women's World Cup?", "answer": "United States" },
-    { "question": "Who is the all-time top scorer in the UEFA Champions League?", "answer": "Cristiano Ronaldo" },
-    { "question": "Who was the manager of England during the 1966 World Cup?", "answer": "Alf Ramsey" },
-    { "question": "Which country has won the most FIFA Women's World Cup titles?", "answer": "United States" },
-    { "question": "Who is the all-time top scorer for Barcelona?", "answer": "Lionel Messi" },
-    { "question": "Which player holds the record for the most appearances in the Premier League?", "answer": "Ryan Giggs" },
-    { "question": "Which club has the most UEFA Europa League titles?", "answer": "Sevilla" },
-    { "question": "Which country won the 1998 FIFA World Cup?", "answer": "France" },
-    { "question": "Which team has won the most Copa del Rey titles?", "answer": "Barcelona" },
-    { "question": "Who is the most expensive football player in the world?", "answer": "Neymar" },
-    { "question": "Which country won the 2006 FIFA World Cup?", "answer": "Italy" },
-    { "question": "Who won the 2019 UEFA Champions League?", "answer": "Liverpool" },
-    { "question": "Who is known as 'The Little Magician'?", "answer": "Lionel Messi" },
-    { "question": "Who is the all-time top scorer in the English Premier League?", "answer": "Harry Kane" },
-    { "question": "Which country has won the most Africa Cup of Nations titles?", "answer": "Egypt" },
-    { "question": "Which player has the most appearances in the history of the World Cup?", "answer": "Lothar Matthäus" },
-    { "question": "Who won the 1994 FIFA World Cup?", "answer": "Brazil" },
-    { "question": "Which team won the 2023 FIFA Women's World Cup?", "answer": "Spain" },
-    { "question": "Which footballer is famous for the 'Hand of God' goal?", "answer": "Diego Maradona" },
-    { "question": "Which player won the 2022 Ballon d'Or?", "answer": "Karim Benzema" },
-    { "question": "Who scored the fastest goal in World Cup history?", "answer": "Hakan Şükür" },
-    { "question": "Who is the all-time top scorer for the Argentina national team?", "answer": "Lionel Messi" },
-    { "question": "Which country hosted the 2010 FIFA World Cup?", "answer": "South Africa" },
-    { "question": "Who scored the winning goal in the 2014 World Cup final?", "answer": "Mario Götze" },
-    { "question": "Which country won the 2000 UEFA Euro Championship?", "answer": "France" },
-    { "question": "Who is the all-time top scorer for Bayern Munich?", "answer": "Gerd Müller" },
-    { "question": "Which country has the most Asian Cup titles?", "answer": "Japan" },
-    { "question": "Who won the 2011 Copa America?", "answer": "Uruguay" },
-    { "question": "Which club has the most Serie A titles?", "answer": "Juventus" },
-    { "question": "Who is the top scorer in the history of the FA Cup?", "answer": "Ian Rush" },
-    { "question": "Who is the all-time top scorer for the Chelsea football club?", "answer": "Frank Lampard" },
-    { "question": "Which country hosted the 2022 FIFA World Cup?", "answer": "Qatar" },
-    { "question": "Who is the only goalkeeper to have won the Ballon d'Or?", "answer": "Lev Yashin" },
-    { "question": "Who scored the most goals in a single Premier League season?", "answer": "Erling Haaland" },
-    { "question": "Which country won the 1982 FIFA World Cup?", "answer": "Italy" },
-    { "question": "Who won the 2017 UEFA Champions League?", "answer": "Real Madrid" },
-    { "question": "Which football club is nicknamed 'The Gunners'?", "answer": "Arsenal" },
-    { "question": "Which country won the 1966 FIFA World Cup?", "answer": "England" },
-    { "question": "Who is the all-time top scorer for Juventus?", "answer": "Cristiano Ronaldo" }
+let questions = {
+  "questions": [
+    {
+      "question": "Who won the 2018 FIFA World Cup?",
+      "answer": "France",
+      "answer2": "Germany",
+      "answer3": "Croatia",
+      "level": 1
+    },
+    {
+      "question": "Which country hosted the 1998 FIFA World Cup?",
+      "answer": "France",
+      "answer2": "Italy",
+      "answer3": "Brazil",
+      "level": 2
+    },
+    {
+      "question": "Who is known as 'The Egyptian King' in football?",
+      "answer": "Mohamed Salah",
+      "answer2": "Ahmed Hossam",
+      "answer3": "Trezeguet",
+      "level": 1
+    },
+    {
+      "question": "Which player is known as 'CR7'?",
+      "answer": "Cristiano Ronaldo",
+      "answer2": "Lionel Messi",
+      "answer3": "Neymar",
+      "level": 1
+    },
+    {
+      "question": "Which club did Lionel Messi play for before joining Paris Saint-Germain?",
+      "answer": "Barcelona",
+      "answer2": "Real Madrid",
+      "answer3": "Boca Juniors",
+      "level": 1
+    },
+    {
+      "question": "Which team won the 2020 UEFA Champions League?",
+      "answer": "Bayern Munich",
+      "answer2": "PSG",
+      "answer3": "Chelsea",
+      "level": 2
+    },
+    {
+      "question": "Which country has won the most World Cup titles?",
+      "answer": "Brazil",
+      "answer2": "Germany",
+      "answer3": "Italy",
+      "level": 2
+    },
+    {
+      "question": "Who is the all-time top scorer in the Premier League?",
+      "answer": "Harry Kane",
+      "answer2": "Alan Shearer",
+      "answer3": "Wayne Rooney",
+      "level": 3
+    },
+    {
+      "question": "Which player is known as 'The Pharaoh'?",
+      "answer": "Mohamed Salah",
+      "answer2": "Essam El Hadary",
+      "answer3": "Amr Zaki",
+      "level": 2
+    },
+    {
+      "question": "Who is the manager of Manchester City as of 2024?",
+      "answer": "Pep Guardiola",
+      "answer2": "Jurgen Klopp",
+      "answer3": "Thomas Tuchel",
+      "level": 1
+    },
+    {
+      "question": "Which country won the 2014 FIFA World Cup?",
+      "answer": "Germany",
+      "answer2": "Argentina",
+      "answer3": "Brazil",
+      "level": 1
+    },
+    {
+      "question": "Who holds the record for the most goals in World Cup history?",
+      "answer": "Marta",
+      "answer2": "Miroslav Klose",
+      "answer3": "Pele",
+      "level": 4
+    },
+    {
+      "question": "Which country won the UEFA Euro 2020?",
+      "answer": "Italy",
+      "answer2": "England",
+      "answer3": "Portugal",
+      "level": 2
+    },
+    {
+      "question": "Who won the Ballon d'Or in 2023?",
+      "answer": "Lionel Messi",
+      "answer2": "Erling Haaland",
+      "answer3": "Kylian Mbappe",
+      "level": 2
+    },
+    {
+      "question": "Which team won the Premier League in the 2022/2023 season?",
+      "answer": "Manchester City",
+      "answer2": "Arsenal",
+      "answer3": "Liverpool",
+      "level": 1
+    },
+    {
+      "question": "Who was the first footballer to win five Ballon d'Or awards?",
+      "answer": "Cristiano Ronaldo",
+      "answer2": "Lionel Messi",
+      "answer3": "Johan Cruyff",
+      "level": 3
+    },
+    {
+      "question": "Who won the 2022 FIFA World Cup?",
+      "answer": "Argentina",
+      "answer2": "France",
+      "answer3": "Brazil",
+      "level": 1
+    },
+    {
+      "question": "Which club has the most UEFA Champions League titles?",
+      "answer": "Real Madrid",
+      "answer2": "Barcelona",
+      "answer3": "AC Milan",
+      "level": 2
+    },
+    {
+      "question": "Which country hosted the 2014 FIFA World Cup?",
+      "answer": "Brazil",
+      "answer2": "South Africa",
+      "answer3": "Germany",
+      "level": 2
+    },
+    {
+      "question": "Which footballer is known as 'The Special One'?",
+      "answer": "Jose Mourinho",
+      "answer2": "Pep Guardiola",
+      "answer3": "Diego Simeone",
+      "level": 2
+    },
+    {
+      "question": "Which country won the 2010 FIFA World Cup?",
+      "answer": "Spain",
+      "answer2": "Netherlands",
+      "answer3": "Germany",
+      "level": 1
+    },
+    {
+      "question": "Who is the all-time top scorer in La Liga?",
+      "answer": "Lionel Messi",
+      "answer2": "Cristiano Ronaldo",
+      "answer3": "Raul",
+      "level": 3
+    },
+    {
+      "question": "Which team won the 2022 FIFA World Cup final?",
+      "answer": "Argentina",
+      "answer2": "France",
+      "answer3": "Germany",
+      "level": 1
+    },
+    {
+      "question": "Which country has the most Copa America titles?",
+      "answer": "Uruguay",
+      "answer2": "Argentina",
+      "answer3": "Brazil",
+      "level": 4
+    },
+    {
+      "question": "Who is the all-time top scorer for Manchester United?",
+      "answer": "Wayne Rooney",
+      "answer2": "Ryan Giggs",
+      "answer3": "Paul Scholes",
+      "level": 3
+    },
+    {
+      "question": "Who won the 2012 UEFA Champions League?",
+      "answer": "Chelsea",
+      "answer2": "Bayern Munich",
+      "answer3": "Real Madrid",
+      "level": 3
+    }
   ]
-};
+}
 
 
-let firstQuestion = questions.questions[0].question;
-let firstAnswer = questions.questions[0].answer;
 
-console.log("First Question:", firstQuestion);
-console.log("First Answer:", firstAnswer);
+//Level 1 (Very Easy): Basic knowledge questions that are widely known.
+//Level 2 (Easy): Slightly more specific but still common knowledge among football fans.
+//Level 3 (Medium): Requires a good understanding of football history and events.
+//Level 4 (Hard): Demands in-depth knowledge of football statistics or less recent events.
+//Level 5 (Very Hard): Specialized knowledge that is less commonly known.
+
+const levels = ['Level 1', 'Level 2', 'Level 3', 'Level 4',  'Level 5'];
+
+
+for(let level of levels){
+	
+	console.log(level);
+	
+}
+
+
+const total_questions = questions.questions.length;// Initialize Total Question
+
+
+let current_question = 1; // Initialize current question
+let current_level = 1; // Initialize current level
+
+
+const Q_progress = document.getElementById('questions_progress'); // Get the progress element
+Q_progress.innerHTML = `Question ${current_question} (Level ${current_level})`;
+
+let random = Math.floor(Math.random() * 10);
+
+let question = document.getElementById('question');
+question.innerHTML = questions.questions[random].question;
+
+//Answers
+let answer1 = document.getElementById('answer1');
+let answer2 = document.getElementById('answer2');
+let answer3 = document.getElementById('answer3');
+answer3.value = questions.questions[random].answer3;
+answer2.value = questions.questions[random].answer2;
+answer1.value = questions.questions[random].answer;
+answer1.setAttribute('onclick', 'submit_answer(9)');
+
+//score
+let correct = document.getElementById('correct');
+let wrong = document.getElementById('wrong');
+let correct_answers = 0;
+let wrong_answers = 0;
+
+let answered = Array();
+
+
+
+function submit_answer(answer){
+	
+	
+	//Generate new question
+	random = Math.floor(Math.random() * 10);
+	random_sort = Math.floor(Math.random() * 3) + 1;
+
+	if(random_sort==1){
+	answer3.value = questions.questions[random].answer3;
+	answer2.value = questions.questions[random].answer2;
+	answer1.value = questions.questions[random].answer;
+	answer1.setAttribute('onclick', 'submit_answer(9)');
+	answer2.setAttribute('onclick', 'submit_answer(1)');
+	answer3.setAttribute('onclick', 'submit_answer(1)');
+	}else if(random_sort==2){
+	answer3.value = questions.questions[random].answer3;
+	answer2.value = questions.questions[random].answer;
+	answer1.value = questions.questions[random].answer2;
+	answer2.setAttribute('onclick', 'submit_answer(9)');
+	answer1.setAttribute('onclick', 'submit_answer(1)');
+	answer3.setAttribute('onclick', 'submit_answer(1)');
+	}else if(random_sort==3){
+	answer3.value = questions.questions[random].answer;
+	answer2.value = questions.questions[random].answer2;
+	answer1.value = questions.questions[random].answer3;
+	answer3.setAttribute('onclick', 'submit_answer(9)');
+	answer1.setAttribute('onclick', 'submit_answer(1)');
+	answer2.setAttribute('onclick', 'submit_answer(1)');
+	}
+
+	
+	
+	// Set the progress element's content
+	current_question++;
+	Q_progress.innerHTML = `Question ${current_question} (Level ${current_level})`;
+	question.innerHTML = questions.questions[random].question;
+	
+	console.log('Answer: ' + answer);
+	console.log('Random sort: ' + random_sort);
+	
+	if(answer == 9){
+		correct_answers++
+		correct.innerHTML = `Correct: ${correct_answers}`;
+	}else{
+		wrong_answers++;
+		wrong.innerHTML = `Wrong: ${wrong_answers}`;;
+	}
+	
+	
+	
+
+	
+}
+

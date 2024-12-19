@@ -15,13 +15,6 @@ let questions = {
       "level": 2
     },
     {
-      "question": "Who is known as 'The Egyptian King' in football?",
-      "answer": "Mohamed Salah",
-      "answer2": "Ahmed Hossam",
-      "answer3": "Trezeguet",
-      "level": 1
-    },
-    {
       "question": "Which player is known as 'CR7'?",
       "answer": "Cristiano Ronaldo",
       "answer2": "Lionel Messi",
@@ -181,6 +174,132 @@ let questions = {
       "answer2": "Bayern Munich",
       "answer3": "Real Madrid",
       "level": 3
+    },
+    {
+      "question": "Which country has the most Africa Cup of Nations titles?",
+      "answer": "Egypt",
+      "answer2": "Cameroon",
+      "answer3": "Nigeria",
+      "level": 2
+    },
+    {
+      "question": "Who is the youngest player to score in a FIFA World Cup?",
+      "answer": "Pele",
+      "answer2": "Kylian Mbappe",
+      "answer3": "Lionel Messi",
+      "level": 4
+    },
+    {
+      "question": "Which team won the first ever FIFA World Cup?",
+      "answer": "Uruguay",
+      "answer2": "Brazil",
+      "answer3": "Italy",
+      "level": 4
+    },
+    {
+      "question": "Which player has the most assists in the UEFA Champions League?",
+      "answer": "Lionel Messi",
+      "answer2": "Cristiano Ronaldo",
+      "answer3": "Xavi",
+      "level": 3
+    },
+    {
+      "question": "Who won the UEFA Europa League in 2023?",
+      "answer": "Sevilla",
+      "answer2": "AS Roma",
+      "answer3": "Manchester United",
+      "level": 3
+    },
+    {
+      "question": "Who is the most expensive footballer transfer as of 2024?",
+      "answer": "Neymar",
+      "answer2": "Kylian Mbappe",
+      "answer3": "Lionel Messi",
+      "level": 2
+    },
+    {
+      "question": "Which country hosted the FIFA World Cup in 2006?",
+      "answer": "Germany",
+      "answer2": "South Korea",
+      "answer3": "Italy",
+      "level": 2
+    },
+    {
+      "question": "Who is the all-time top scorer for Brazil?",
+      "answer": "Pele",
+      "answer2": "Ronaldo",
+      "answer3": "Neymar",
+      "level": 4
+    },
+    {
+      "question": "Which country won the FIFA Women’s World Cup in 2019?",
+      "answer": "USA",
+      "answer2": "Netherlands",
+      "answer3": "Germany",
+      "level": 3
+    },
+    {
+      "question": "Which team won the Copa del Rey in 2023?",
+      "answer": "Real Madrid",
+      "answer2": "Barcelona",
+      "answer3": "Valencia",
+      "level": 3
+    },
+    {
+      "question": "Which footballer has the most appearances in FIFA World Cup matches?",
+      "answer": "Lothar Matthaus",
+      "answer2": "Miroslav Klose",
+      "answer3": "Cafu",
+      "level": 4
+    },
+    {
+      "question": "Who is the current captain of the England national football team as of 2024?",
+      "answer": "Harry Kane",
+      "answer2": "Jordan Henderson",
+      "answer3": "Declan Rice",
+      "level": 2
+    },
+    {
+      "question": "Which club won the Bundesliga in 2022/2023?",
+      "answer": "Bayern Munich",
+      "answer2": "Borussia Dortmund",
+      "answer3": "RB Leipzig",
+      "level": 1
+    },
+    {
+      "question": "Who won the FIFA Puskas Award in 2023?",
+      "answer": "Dimitri Payet",
+      "answer2": "Alessia Russo",
+      "answer3": "Richarlison",
+      "level": 2
+    },
+    {
+      "question": "Which club did Zinedine Zidane play for before retiring?",
+      "answer": "Real Madrid",
+      "answer2": "Juventus",
+      "answer3": "Bordeaux",
+      "level": 3
+    },
+    {
+      "question": "Which country hosted the FIFA World Cup in 1994?",
+      "answer": "USA",
+      "answer2": "Brazil",
+      "answer3": "Italy",
+      "level": 2
+    },
+    {
+      "question": "Which country has the most Asian Cup titles?",
+      "answer": "Japan",
+      "answer2": "South Korea",
+      "answer3": "Saudi Arabia",
+      "level": 3
+    },
+    {
+      "question": "Which team won the 2023 FIFA Club World Cup?",
+      "answer": "Real Madrid",
+      "answer2": "Flamengo",
+      "answer3": "Chelsea",
+      "level": 3
     }
   ]
 }
@@ -195,28 +314,28 @@ let questions = {
 
 const levels = ['Level 1', 'Level 2', 'Level 3', 'Level 4',  'Level 5'];
 
-
-for(let level of levels){
-	
-	console.log(level);
-	
-}
+//Sort Questions by level
+questions.questions.sort(function(a, b){
+    return a.level - b.level;
+});
 
 
-const total_questions = questions.questions.length;// Initialize Total Question
+
+let total_questions = questions.questions.length;// Initialize Total Question
+let current_question = 0; // Initialize current question
+
+console.log(total_questions);
 
 
-let current_question = 1; // Initialize current question
-let current_level = 1; // Initialize current level
 
 
-const Q_progress = document.getElementById('questions_progress'); // Get the progress element
-Q_progress.innerHTML = `Question ${current_question} (Level ${current_level})`;
 
-let random = Math.floor(Math.random() * 10);
+//Generate a random number
+let random = current_question;
 
 let question = document.getElementById('question');
 question.innerHTML = questions.questions[random].question;
+let level = questions.questions[random].level;
 
 //Answers
 let answer1 = document.getElementById('answer1');
@@ -236,12 +355,17 @@ let wrong_answers = 0;
 let answered = Array();
 
 
+//Progress bar
+const Q_progress = document.getElementById('questions_progress'); // Get the progress element
+Q_progress.innerHTML = `Question ${current_question}  / ${total_questions} (Level ${level})`;
+
+
 
 function submit_answer(answer){
 	
 	
 	//Generate new question
-	random = Math.floor(Math.random() * 10);
+	random = current_question;
 	random_sort = Math.floor(Math.random() * 3) + 1;
 
 	if(random_sort==1){
@@ -267,11 +391,11 @@ function submit_answer(answer){
 	answer2.setAttribute('onclick', 'submit_answer(1)');
 	}
 
-	
+	level = questions.questions[random].level;
 	
 	// Set the progress element's content
 	current_question++;
-	Q_progress.innerHTML = `Question ${current_question} (Level ${current_level})`;
+	Q_progress.innerHTML = `Question ${current_question} / ${total_questions} (Level ${level})`;
 	question.innerHTML = questions.questions[random].question;
 	
 	console.log('Answer: ' + answer);
